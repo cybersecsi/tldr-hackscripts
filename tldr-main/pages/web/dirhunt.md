@@ -1,5 +1,6 @@
 # dirhunt
 > Find web directories without bruteforce
 
-- Spider the site: 
-dirhunt {{url}}
+- Spider the site:  
+
+`dirhunt {{url}}`

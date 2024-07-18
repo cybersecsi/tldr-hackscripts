@@ -3,5 +3,5 @@
 
 - Run domain discovery with a wordlist containing a list of subdomains:
 
-`amass enum -d {{domain}} -w {{wordlist_file}}
+`amass enum -d {{domain}} -w {{wordlist_file}}`
 
