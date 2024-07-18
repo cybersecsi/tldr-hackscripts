@@ -1,7 +1,11 @@
 # dirb
 > Bruteforce folders and files
 
-- default dirbusting using `/usr/share/dirb/wordlists/common.txt`:
+- Default dirbusting using `/usr/share/dirb/wordlists/common.txt`:
 
 `dirb {{url}}`
+
+- Dirbusting using wordlists:
+
+`dirb {{url}} {{wordlist(s)}}
 
