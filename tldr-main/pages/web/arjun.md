@@ -14,4 +14,11 @@
 `arjun -w {{wordlist}} -u {{url}}`
 
 
+- Scan different methods:
+
+`arjun -u {{url}} -m POST`
+
+- Output in JSON: 
+
+`arjun -u {{url}} -oJ {{json_file}}`
 
