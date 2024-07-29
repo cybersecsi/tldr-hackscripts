@@ -28,3 +28,7 @@
 
 `sqlmap --update`
 
+
+- Increase the risk level andadd more tests: 
+
+`sqlmap -u {{url}} --level 5`
