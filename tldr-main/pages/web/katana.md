@@ -1,13 +1,21 @@
 # katana
-A next-generation crawling and spidering framework
+> A next-generation crawling and spidering framework
 
 - Run against a single url:
 
 `katana -u {{url}}`
 
-- Exclude log-out and about strings: 
+- Exclude log-out and about strings on paths: 
 
 `katana -u {{url}} -cos log-out,about`
+
+- Filter strings on paths:
+
+`katana -u {{url}} -mr str1, str2`
+
+- Select the navigation depth (default 3):
+
+`katana -u {{url}} -d 1`
 
 
 - Exclude specific subdomains:
