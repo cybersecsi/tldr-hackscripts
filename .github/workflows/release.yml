@@ -1,0 +1,48 @@
+name: Create TLDR Release
+
+on:
+    push:
+        branches:
+            - release
+
+jobs:
+    create-release:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v3
+
+            - name: Read version from VERSION.txt
+              id: get_version
+              run: | 
+                VERSION=$(cat VERSION.txt)
+                echo "VERSION=${VERSION}" >> GITHUB_ENV
+
+            - name: Set Node.js environment
+              uses: actions/setup-node@v3
+              with:
+                node-version: '14'
+
+            - name: Install deps
+              run: npm install
+
+            - name: Zip tldr-main directory
+              run: zip -r tldr-pages.zip tldr-main
+            
+            - name: Create GitHub release
+              uses: actions/create-release@v1
+              id: create_release
+              with: 
+                tag_name: ${{ env.VERSION }}
+                release_name: Release ${{ env.VVERSION }}
+                draft: false
+                prerelease: false
+            
+            - name: Upload release asset 
+              uses: actions/upload-release-asset@v1
+              with:
+                upload_url: ${{ steps.create_release.outputs.upload_url }}
+                asset_path: ./tldr-pages.zip
+                asset_name: tldr-pages.zip
+                asset_content_type: application/zip
