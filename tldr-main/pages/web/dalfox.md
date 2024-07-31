@@ -1,4 +1,7 @@
 # dalfox
+
+>Dalfox is a powerful open-source XSS scanner and utility focused on automation.
+
 - Run on GET request:
 
 `dalfox url {{url_with_params}}"`
