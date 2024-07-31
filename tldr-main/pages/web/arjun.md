@@ -1,18 +1,21 @@
 # arjun
-> Arjun can find query parameters for URL endpoints. If you don't get what that means, it's okay, read along.
+> HTTP parameter discovery suite.
 
-- Scan single url:
+- Scan single url with default wordlist (large):
 
 `arjun -u {{url}}`
+
+- Scan single url with a built-in wordlist (small, medium, large):
+
+`arjun -u {{url}} -w {{small|medium|large}}`
+
+- Select custom wordlist to be used: 
+
+`arjun -w {{wordlist}} -u {{url}}`
 
 - Scan multiple targets from raw Burp requests:
 
 `arjun -i {{targets_file}}`
-
-- Select wordlist to be used: 
-
-`arjun -w {{wordlist}} -u {{url}}`
-
 
 - Scan different methods:
 
@@ -22,3 +25,6 @@
 
 `arjun -u {{url}} -oJ {{json_file}}`
 
+- Collect parameter names for a domain (not subdomain) from CommonCrawl, Open Threat Exchange and WaybackMachine and check if they exist on your targets
+
+`arjun https://api.example.com/endpoint --passive example.com`
