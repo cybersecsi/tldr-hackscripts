@@ -18,7 +18,7 @@ jobs:
               run: | 
                 cat VERSION.txt
                 VERSION=$(cat VERSION.txt)
-                echo "VERSION=${VERSION}" >> GITHUB_ENV
+                echo "VERSION=${VERSION}" >> "$GITHUB_ENV"
 
             - name: Set Node.js environment
               uses: actions/setup-node@v3
