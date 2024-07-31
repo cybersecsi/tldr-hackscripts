@@ -1,4 +1,6 @@
 # sqlmap
+> Scanner for finding and exploiting SQL injection flaws and taking over of database servers
+
 - Run sqlmap against a target without interaction (no ask for confirms):
 
 `sqlmap -u {{url}}} --batch`
