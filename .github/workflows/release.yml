@@ -16,6 +16,7 @@ jobs:
             - name: Read version from VERSION.txt
               id: get_version
               run: | 
+                cat VERSION.txt
                 VERSION=$(cat VERSION.txt)
                 echo "VERSION=${VERSION}" >> GITHUB_ENV
 
