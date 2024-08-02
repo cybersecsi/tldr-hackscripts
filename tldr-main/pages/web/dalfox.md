@@ -6,6 +6,9 @@
 
 `dalfox url {{url_with_params}}"`
 
+- Run only discovery (show all the reflected params) and skip the bav (Basic Another Vulnerability) analysis:
+
+`dalfox url {{url_with_params}}" --only-discovery`
 
 - Run on POST request: 
 
